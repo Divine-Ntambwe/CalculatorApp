@@ -1,24 +1,50 @@
 function displayNum(num) {
-    document.getElementById("screen").textContent += document.getElementById(num).textContent
+    const screen = document.getElementById("screen");
+    screen.textContent += document.getElementById(num).textContent;
 }
 
 function clearDisplay() {
-    document.getElementById("screen").textContent=""
+    const screen = document.getElementById("screen");
+    screen.textContent=""
+}
+
+let num1 ;
+let sign ;
+
+
+function operate(operator) {
+    const screen = document.getElementById("screen");
+    num1 = screen.textContent;
+    sign = document.getElementById(operator).textContent;
+    screen.textContent += "  " + document.getElementById(operator).textContent + "  "  
 }
 
 function equalTo() {
-    let screenText = document.getElementById("screen").textContent;
-    let signs = ["+","-","/","x"," "] ;
+    const screen = document.getElementById("screen");
+    let screenText = screen.textContent;
+    let ans ;
+    let num2 ;
+    num2 = screenText.slice(screenText.indexOf(sign)+2,screenText.length);
+    num1 = Number(num1);
+    num2 = Number(num2);
 
-    for (i of screenText) {
-        for (sign of signs) {
-            if (sign === i) {
-                screenText = screenText.replace(sign,"")
-            } 
-        }
+    if (sign === "+") {
+        ans = num1 + num2;
+
+    } else if (sign === "-") {
+        ans = num1 - num2;
+
+    } else if (sign === "/") {
+        ans = num1 / num2;
+
+    } else if (sign === "x") {
+        ans = num1 * num2;
+
     }
 
-    document.getElementById("screen").textContent += " = " + screenText
+
+   
+    screen.textContent += " = " + ans
 
 
 
