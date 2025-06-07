@@ -19,36 +19,35 @@
       </div>
      
       <div id="numbers">
-
-        <button class="operators" id="sqr" onclick="operate('sqr')">^2</button>
+        <!-- THE PARAMETER FOR THE FUNCTION OPERATE TAKES IN THE VALUE OF THE NAME(ID) OF THE BUTTON  -->
+        <button class="sqr-sqrt" id="sqr" onclick="displayAns('sqr')">^2</button>
         <button class="operators" id="sqrx" onclick="operate('sqrx')">^x</button>
-        <button class="operators" id="sqrt" onclick="operate('sqrt')">2/</button>
+        <button class="sqr-sqrt" id="sqrt" onclick="displayAns('sqrt')">2/</button>
         <button class="operators" id="sqrtx" onclick="operate('sqrtx')">x/</button>
 
-        <button id="." onclick="displayNum('.')">pi</button>
-        <button class="operators" id="perc" onclick="operate('%')">%</button>
+        <button id="." onclick="displayNum('.')">.</button>
+        <button class="operators" id="perc" onclick="percentage()">%</button>
         <button id="-" onclick="displayNum('-')">-/+</button>
-        <button class="operators" id="divide" onclick="operate('/')">/</button>
+        <button class="operators" id="divide" onclick="operate('divide')">/</button>
 
         <button id="1" onclick="displayNum('1')">1</button>
         <button id="2" onclick="displayNum('2')">2</button>
         <button id="3" onclick="displayNum('3')">3</button>
-        <button class="operators" id="times" onclick="operate('x')">x</button>
+        <button class="operators" id="times" onclick="operate('times')">x</button>
 
       
 
         <button id="4" onclick="displayNum('4')">4</button>
         <button id="5" onclick="displayNum('5')">5</button>
         <button id="6" onclick="displayNum('6')">6</button>
-        <button class="operators" id="minus" onclick="operate('-')">-</button>
+        <button class="operators" id="minus" onclick="operate('minus')">-</button>
 
         <button id="7" onclick="displayNum('7')">7</button>
         <button id="8" onclick="displayNum('8')">8</button>
         <button id="9" onclick="displayNum('9')">9</button>
-        <button class="operators" id="add" onclick="operate('+')">+</button>
+        <button class="operators" id="add" onclick="operate('add')">+</button>
 
         <button id="0" onclick="displayNum('0')">0</button>
-        <button id="." onclick="displayNum('.')">.</button>
         <button class="operators" id="equal-to" onclick="equalTo()">=</button>
         
         
