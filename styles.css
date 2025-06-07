@@ -16,7 +16,7 @@ body {
 
 #calculator-body {
     width: 500px;
-    height: 600px;
+    height: fit-content;
     background-color:darkmagenta;
     border-radius: 20px;
     padding: 15px;
@@ -51,9 +51,13 @@ button:hover {
 
 }
 
-#clear {
+#clear-del {
     display: flex;
-    justify-self: end;
+    justify-content: space-between;
+}
+
+#clear-del button {
+    
     margin-top: 15px ;
     width: 50px;
     height: 20px;
@@ -73,6 +77,6 @@ button:hover {
 }
 
 #equal-to {
-    grid-column: 2/4;
+    grid-column: 2/5;
 }
 
